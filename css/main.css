@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Barlow", sans-serif;
+}
+.sec-font {
+  font-family: "Fraunces", serif;
+}
+/* Landing Start */
+.landing {
+  background-image: url(../images/desktop/image-header.jpg);
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 767px) {
+  .landing {
+    background-image: url(../images/mobile/image-header.jpg);
+  }
+}
+@media (max-width: 992px) {
+  .landing .navbar-nav {
+    background-color: white;
+    padding: 1rem;
+    margin-top: 3rem;
+    position: absolute;
+    width: calc(100% - 6rem);
+    z-index: 1111;
+  }
+  .landing .navbar-nav::before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    top: -30px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  }
+  .landing .navbar-nav li:not(:last-child) a {
+    color: hsl(232, 10%, 55%) !important;
+  }
+}
+.landing .navbar-toggler:focus {
+  box-shadow: none;
+}
+.landing .navbar-toggler-icon {
+  background-image: url(../images/icon-hamburger.svg);
+}
+.landing .nav-item .contact {
+  background-color: hsl(51, 100%, 49%);
+}
+@media (min-width: 992px) {
+  .landing .nav-item .contact {
+    background-color: white;
+  }
+}
+.landing .nav-item .contact:hover {
+  background-color: hsl(200deg 100% 71%) !important;
+  color: white;
+}
+.landing h1 {
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  margin-top: 7rem;
+}
+.landing h1::before {
+  content: url(../images/icon-arrow-down.svg);
+  position: absolute;
+  bottom: -180px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* Landing End */
+/* About us Start */
+.about .row > div {
+  padding: 4%;
+}
+
+.about .info p {
+  color: hsl(232, 10%, 55%);
+}
+@media (max-width: 992px) {
+  .about .info p {
+    font-size: 18px !important;
+  }
+}
+.about .info .learn-more::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 7px;
+  transition: 0.3s;
+}
+.about .info .learn-more.yellow::before {
+  background-color: hsl(51, 100%, 49%, 40%);
+}
+.about .info .learn-more.yellow:hover:before {
+  background-color: hsl(51, 100%, 49%);
+}
+.about .info .learn-more.red::before {
+  background-color: hsl(7, 99%, 70%, 40%);
+}
+.about .info .learn-more.red:hover:before {
+  background-color: hsl(7, 99%, 70%);
+}
+/* About us End */
+/* Services Start */
+.services .content {
+  width: 380px;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.services .content p {
+  font-size: 18px;
+}
+.services .graphic-design h4 {
+  color: hsl(158deg 16% 19%);
+}
+.services .graphic-design p {
+  color: hsl(158deg 15% 34%);
+}
+.services .photography {
+  color: hsl(198, 62%, 26%);
+}
+/* Services End */
+/* Testimonials Start */
+.testimonials h5 {
+  color: hsl(232, 10%, 55%);
+  letter-spacing: 5px;
+}
+.testimonials .client img {
+  width: 90px;
+}
+.testimonials .client .say {
+  color: hsl(213, 9%, 39%);
+  height: 140px;
+}
+@media (max-width: 767px) {
+  .testimonials .client .say {
+    height: auto;
+  }
+}
+.testimonials .client .title {
+  color: hsl(210, 4%, 67%);
+}
+/* Testimonials End */
+/* Footer Start */
+footer {
+  background-color: #90d4c5;
+}
+footer h5 {
+  font-size: 3rem;
+  color: hsl(168, 34%, 41%);
+}
+footer .links li a {
+  text-decoration: none;
+  color: hsl(168, 34%, 41%);
+  transition: 0.3s;
+  cursor: pointer;
+}
+footer .links li a:hover {
+  color: rgb(248, 249, 250);
+}
+footer .social svg {
+  fill: #2c7566;
+  transition: 0.3s;
+}
+footer .social svg:hover {
+  fill: rgb(248, 249, 250);
+}
+/* Footer End */
